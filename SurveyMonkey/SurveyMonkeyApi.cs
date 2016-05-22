@@ -115,7 +115,7 @@ namespace SurveyMonkey
 
             if ((int)o["status"] != 0)
             {
-                string msg = String.Format("Problem querying the Survey Monkey API, error code {0}: {1}", (string) o["status"], (string) o["errmsg"]);
+                string msg = String.Format("Problem querying the Survey Monkey API, error code {0}: {1}", (int) o["status"], (string) o["errmsg"]);
                 throw new WebException(msg);
             }
             return o;
